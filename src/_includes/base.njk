@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} || hellogaray</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    {% include 'header.njk' %}
+    
+    <ul id="thumbnail-container">
+        <li class="thumbnail">
+            <img class='thumbnail__book_cover' src="./assets/covers/{{ book.isbn }}.jpg" alt="{{ book.title }} cover">
+            <div class='thumbnail__book_title'>{{ book_title }}</div>
+        </li>
+
+        <li class="thumbnail">
+           <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+           <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+
+        <li class="thumbnail">
+                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+
+        <li class="thumbnail">
+                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+
+        <li class="thumbnail">
+                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+
+        <li class="thumbnail">
+                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+
+        <li class="thumbnail">
+                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+        
+        <li class="thumbnail">
+                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
+                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
+        </li>
+    </ul>
+
+<div class="book-layout">
+  <aside class="book__info">
+    <h1 class="book__title">The Handmaid's Tale</h1>
+
+    <img class="book__cover" src="./assets/covers/handmaid.webp" alt="Book cover of The Handmaid's Tale">
+    <div class="book__status-icons">
+        <span class="icon finished" title="Finished">✔️</span>
+        <span class="icon owned" title="Do not own">📕</span>
+        <span class="icon kindle" title="Read on Kindle">📱</span>
+    </div>
+    <div class="book__author">by Margaret Atwood</div>
+    <div class="book__date_finished">Finished: 2023-10-12</div>
+    <div class="book__total_pages">220 pages</div>
+
+    <div class="book__tags">#Distopia #WomenWriter</div>
+    <div class="book__isbn">ISBN: 9348982323</div>
+            <svg class="warnings-note__icon" focusable="false" aria-hidden="true" viewBox="0 0 14 20" width="14" height="20">
+          <use href="#spoilers"></use>
+        </svg>
+  </aside>
+
+  <section class="book__quotes">
+    <blockquote>
+      “Better never means better for everyone... It always means worse, for some.”
+    </blockquote>
+    <blockquote>
+      “When we think of the past it's the beautiful things we pick out. We want to believe it was all like that.”
+    </blockquote>
+  </section>
+</div>
+
+
+</body>
+
+    {% include 'footer.njk' %}
+
+</html>
