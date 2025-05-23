@@ -1,95 +1,338 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>example || hellogaray</title>
+    <title>commonplace || hellogaray</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-
-        <header class="header">
-        <!-- Name Logo -->
-        <section class="header__logo">
-            <div class="logo__letters">
-                <div class="letter first_initial">M</div>
-                <div class="letter char">'</div>
-                <div class="letter char">s</div>
-                <div class="letter char">&nbsp;</div>
-                <div class="letter second_initial">B</div>
-                <div class="letter char">o</div>
-                <div class="letter char">o</div>
-                <div class="letter char">k</div>
-                <div class="letter char">m</div>
-                <div class="letter char">a</div>
-                <div class="letter char">r</div>
-                <div class="letter char">k</div>
-                <div class="letter char">s</div>
-            </div> 
-        </section>
-    </header>
+<header class="header">
+    <!-- Name Logo -->
+    <section class="header__logo">
+        <div class="logo__letters">
+            <div class="letter first_initial">M</div>
+            <div class="letter char">'</div>
+            <div class="letter char">s</div>
+            <div class="letter char">&nbsp;</div>
+            <div class="letter second_initial">B</div>
+            <div class="letter char">o</div>
+            <div class="letter char">o</div>
+            <div class="letter char">k</div>
+            <div class="letter char">m</div>
+            <div class="letter char">a</div>
+            <div class="letter char">r</div>
+            <div class="letter char">k</div>
+            <div class="letter char">s</div>
+        </div> 
+    </section>
+</header>
     
-    <ul id="thumbnail-container">
-        <li class="thumbnail">
-            <img class='thumbnail__book_cover' src="./assets/covers/.jpg" alt=" cover">
-            <div class='thumbnail__book_title'></div>
-        </li>
+<ul id="thumbnail-grid">
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
 
-        <li class="thumbnail">
-           <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-           <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
 
-        <li class="thumbnail">
-                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
 
-        <li class="thumbnail">
-                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
 
-        <li class="thumbnail">
-                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
 
-        <li class="thumbnail">
-                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
 
-        <li class="thumbnail">
-                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
-        
-        <li class="thumbnail">
-                <img class='thumbnail__book_cover' src="./assets/covers/handmaid.webp">
-                <div class='thumbnail__book_title'>The Handmaid's Tale</div>
-        </li>
-    </ul>
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
+
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
+
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
+
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
+
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
+
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
+
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
+
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
+
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
+
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
+
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <li class="thumbnail">
+        <img class="thumbnail__book_cover" src="./assets/covers/handmaid.webp" alt="The Handmaid's Tale book cover">
+        <div class="thumbnail__info">
+            <h3 class="thumbnail__book_title">The Handmaid's Tale</h3>
+            <span class="thumbnail__book_author">by Margaret Atwood</span>
+
+            <div class="thumbnail__statuses">
+                <!-- Rating -->
+                <div class="thumbnail__status" title="Rating">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                    </svg>
+                    5.0
+                </div>
+
+                <!-- Total Pages -->
+                <div class="thumbnail__status" title="Total Pages">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                    </svg>
+                    320
+                </div>
+
+                <!-- Date Read -->
+                <div class="thumbnail__status" title="Date Read">
+                    <svg class="thumbnail__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                    </svg>
+                    2025
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
 <div class="book-layout">
   <aside class="book__info">
     <h1 class="book__title">The Handmaid's Tale</h1>
-
+    <div class="book__author">Margaret Atwood</div>
     <img class="book__cover" src="./assets/covers/handmaid.webp" alt="Book cover of The Handmaid's Tale">
-    <div class="book__status-icons">
-        <span class="icon finished" title="Finished">✔️</span>
-        <span class="icon owned" title="Do not own">📕</span>
-        <span class="icon kindle" title="Read on Kindle">📱</span>
-    </div>
-    <div class="book__author">by Margaret Atwood</div>
-    <div class="book__date_finished">Finished: 2023-10-12</div>
-    <div class="book__total_pages">220 pages</div>
 
-    <div class="book__tags">#Distopia #WomenWriter</div>
-    <div class="book__isbn">ISBN: 9348982323</div>
-            <svg class="warnings-note__icon" focusable="false" aria-hidden="true" viewBox="0 0 14 20" width="14" height="20">
-          <use href="#spoilers"></use>
-        </svg>
+    <div class="book__status_icons">
+        <span class="icon icon_finished" title="Finished"></span>
+        <span class="icon icon_owned" title="Own Book"></span>
+        <span class="icon icon_kindle" title="Read on Kindle"></span>
+    </div>
+
+    <div class="book__status">Completed</div>
+    <div class="book__date_finished">Finished 2023/10/12</div>
+    <div class="book__total_pages">220 pages long</div>
   </aside>
 
   <section class="book__quotes">
@@ -110,6 +353,5 @@
             <div class="clock">--:--:--</div>
             <div class="scroll_message">[Scroll To Explore]</div>
         </div>
-    </footer>
-
+    </footer> 
 </html>
