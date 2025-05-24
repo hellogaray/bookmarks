@@ -278,6 +278,12 @@ footer {
   padding-right: 2em;  
 }
 
+.book__itro {
+  font-size: .70em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
 
 .book__cover {
   width: 100%;
