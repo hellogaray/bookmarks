@@ -278,8 +278,8 @@ footer {
   padding-right: 2em;  
 }
 
-.book__itro {
-  font-size: .70em;
+.book__intro {
+  font-size: 0.8rem;
   text-align: center;
   text-transform: uppercase;
   padding-bottom: 15px;
