@@ -141,7 +141,7 @@ p {
 #thumbnail-grid {
   max-width: 1020px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 2rem;
   list-style: none;
   padding: 0;
@@ -157,7 +157,7 @@ p {
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, opacity 0.3s ease;
   opacity: 0.85;
-  background-color: var(--light-bg, #f9f9f9); /* fallback */
+  background-color: var(--light-bg, #f9f9f9);
 }
 
 .thumbnail:hover {
@@ -185,7 +185,7 @@ p {
 }
 
 .thumbnail__book_title {
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--dark-color, #222);
   margin: 0;
@@ -193,7 +193,7 @@ p {
 }
 
 .thumbnail__book_author {
-  font-size: 0.70rem;
+  font-size: 0.7rem;
   color: var(--dark-color-muted, #666);
   margin: 0;
   opacity: 0.85;
@@ -207,12 +207,43 @@ p {
 }
 
 .thumbnail__status {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 4px;
   font-size: 0.8rem;
   color: var(--dark-color);
   opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: default;
+}
+
+.thumbnail__status:hover {
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+/* Tooltip */
+.thumbnail__status[data-label]::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(34, 34, 34, 0.95);
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.thumbnail__status:hover[data-label]::after {
+  opacity: 1;
 }
 
 .thumbnail__icon {
@@ -221,20 +252,6 @@ p {
   fill: currentColor;
   flex-shrink: 0;
 }
-
-.thumbnail__status[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  background: black;
-  color: white;
-  font-size: 0.7rem;
-  padding: 2px 6px;
-  border-radius: 4px;
-  top: 100%;
-  margin-top: 4px;
-  white-space: nowrap;
-}
-
 
 /* ========================================
   FOOTER SECTION
@@ -314,34 +331,6 @@ footer {
   overflow: hidden;
   border-radius: 8px;
 }
-
-.book__cover {
-  width: 100%;
-  display: block;
-}
-
-.book__cover-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 0.9rem;
-  font-family: 'Inter', sans-serif;
-  text-align: center;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.book__cover-wrapper:hover .book__cover-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 
 .book__date_finished,
 .book__total_pages,
