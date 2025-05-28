@@ -163,7 +163,6 @@ p {
 /* ========================================
    THUMBNAIL SECTION
    ======================================== */
-
 #main-body {
   max-width: 1216px;
   position: static;
@@ -214,65 +213,91 @@ p {
 
 .thumbnail__statuses {
   display: flex;
-  padding-top: .5rem;
-  width: 100%;
-  gap: 18px;
   flex-wrap: wrap;
+  gap: 0.75rem; 
+  padding-top: 0.5rem;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .thumbnail__status {
   display: flex;
-  gap: 6px;
-  font-size: 0.8rem;
-  color: var(--dark-color);
-  opacity: 0.9;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  background-color: white;
-  align-content: center;
   align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: center;
-  overflow: visible;
-  transition: opacity 0.5s ease-in-out;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--dark-color);
+  background-color: #fff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0.85;
+  transform: translateY(4px);
+  transition: all 0.3s ease-in-out;
 }
 
 .thumbnail:hover .thumbnail__status {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .thumbnail__status:hover {
   opacity: 1;
-  transform: scale(1.01);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Tooltip style */
+.thumbnail__status[data-label]::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(34, 34, 34, 0.95);
+  color: #fff;
+  padding: 3px 7px;
+  font-size: 0.65rem;
+  white-space: nowrap;
+  opacity: 0;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.thumbnail__status:hover[data-label]::after {
+  opacity: 1;
+}
+
+/* Animate in the info panel */
 .thumbnail__info {
   position: absolute;
   bottom: -120px;
-
   width: 100%;
   background-color: var(--light-panel, #ffffff);
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   text-align: left;
-  transition: background-color 0.3s ease-in-out,
-              opacity 0.5s ease-in-out,
-              bottom 0.25s ease-in-out;
   opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.3s ease, bottom 0.25s ease-in-out;
 }
 
 .thumbnail:hover .thumbnail__info {
   opacity: 1;
   bottom: 0;
-
+  transform: translateY(0);
 }
 
 .thumbnail__book_title {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: var(--dark-color, #222);
-  margin: 0;
-  margin-bottom: -5px;
+  color: var(--dark-color);
+  margin: 0 0 2px;
 }
 
 .thumbnail__book_author {
@@ -281,6 +306,7 @@ p {
   margin: 0;
   opacity: 0.85;
 }
+
 
 
 /* Tooltip */
