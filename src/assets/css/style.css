@@ -54,7 +54,7 @@ p {
    ======================================== */
 .header {
   position: sticky;
-  max-width: 1280px;
+  max-width: 1316px;
   z-index: 1000; /* Make sure it's on top of the page content */
   display: flex;
   justify-content: space-between;
@@ -68,6 +68,7 @@ p {
   --shadow-elevation: 0 2px 8px var(--shadow-color);
   box-shadow: var(--shadow-elevation);  padding-left: 1.5rem;
   padding-right: 1.5rem;
+  overflow: hidden;
 }
 
 .scroll-blur-overlay {
@@ -164,6 +165,26 @@ p {
   transition-delay: 0s;
 }
 
+.header__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+}
+
+/* Header link styles and hover animations */
+.header__link {
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
 /* ========================================
    THUMBNAIL SECTION
    ======================================== */
@@ -175,10 +196,12 @@ p {
 
 #thumbnail-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 3rem;
   list-style: none;
   padding: 0;
+  justify-content: center;
+
 }
 
 #main-body__title {
@@ -186,11 +209,11 @@ p {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 2rem;
-  background-color: red;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
   font-size: .8rem;
+  background-color: var(--light-panel, #ffffff);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail {
@@ -200,13 +223,15 @@ p {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease, opacity 0.3s ease;
   opacity: 0.85;
+  border-radius: 8px;
+  background-color: transparent;
 }
 
 
 .thumbnail__book_cover {
   display: block;
   width: 100%;
-  height: 400px;
+  height: 410px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -225,7 +250,6 @@ p {
   transition: opacity 0.4s ease, transform 0.3s ease, bottom 0.25s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
-
 
 .thumbnail__book_title {
   font-size: 0.8rem;
@@ -320,24 +344,22 @@ p {
   color: var(--dark-color);
   background-color: #fff;
   border-radius: 6px;
-  opacity: 0.85;
+  opacity: 0.5;
   transform: translateY(4px);
   transition: all 0.3s ease-in-out;
-  padding: 0rem 0.25rem 0.25rem 0;
+  padding: 0.25rem;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 .thumbnail:hover .thumbnail__status {
-  opacity: 1;
   transform: translateY(0);
 }
 
 .thumbnail__status:hover {
   opacity: 1;
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transform: scale(2.05);
 }
 
 .thumbnail__status:hover[data-label]::after {
