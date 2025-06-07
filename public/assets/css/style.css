@@ -469,62 +469,151 @@ footer {
   overflow: hidden;
   border-radius: 8px;
 }
-
 .book__statuses {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   justify-content: center;
+  align-items: flex-start;
+  margin-top: 1rem;
 }
 
+/* Each individual status */
 .book__status {
-  display: flex;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   gap: 0.5rem;
   font-family: var(--font-inter);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--dark-color);
-  background-color: #fff;
+  background-color: #f9f9f9;
   border-radius: 6px;
-  opacity: 0.5;
+  padding: 0.4rem 0.6rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  opacity: 0.6;
   transform: translateY(4px);
   transition: all 0.3s ease-in-out;
-  padding: 0.25rem;
+  cursor: default;
 }
 
 .book:hover .book__status {
   transform: translateY(0);
+  opacity: 0.8;
 }
 
 .book__status:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Tooltip */
 .book__status:hover[data-label]::after {
   opacity: 1;
+  transform: translate(-50%, -0.5rem);
 }
 
-/* Tooltip style */
 .book__status[data-label]::after {
   content: attr(data-label);
   position: absolute;
-  bottom: 1.8rem;
+  bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(0.25rem);
   background: rgba(34, 34, 34, 0.95);
   color: #fff;
-  padding: 3px 7px;
+  padding: 4px 8px;
   font-size: 0.65rem;
   white-space: nowrap;
   opacity: 0;
   border-radius: 4px;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
   z-index: 5;
 }
 
+/* Icon inside the status */
 .book__icon {
   width: 16px;
   height: 16px;
   fill: currentColor;
   flex-shrink: 0;
+}
+
+blockquote {
+  font-family: var(--font-sorts-mill), serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--dark-color);
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-in-out;
+}
+
+blockquote:hover {
+  background-color: #ffffff;
+  border-left-color: var(--dark-color);
+  transform: scale(1.015);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+blockquote::before {
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  color: var(--dark-color-muted);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+blockquote::after {
+  content: "”";
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  position: absolute;
+  bottom: -0.5rem;
+  right: 1rem;
+  color: var(--dark-color-muted);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.quote__page {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-family: var(--font-inter);
+  color: var(--dark-color-muted);
+  opacity: 0.7;
+  background-color: #fff;
+  padding: 0 0.4em;
+  border-radius: 4px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+/* Optional fade-in animation */
+@keyframes fadeInQuote {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+blockquote {
+  animation: fadeInQuote 0.6s ease-in-out both;
 }
