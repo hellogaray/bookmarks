@@ -1,3 +1,4 @@
 {
-    "tags": "books"
+    "tags": "books",
+    "layout": "book.njk"
 }

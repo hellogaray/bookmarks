@@ -5,7 +5,7 @@ status: Completed
 image: The Handmaid's Tale.webp
 date_range: "2025/01/10 - 2025/01/25"
 year: 2025
-rating: 5
+rating: 4
 length: 320
 own: Physical
 quotes:
