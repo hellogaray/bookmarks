@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} || hellogaray</title>
-    
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }} || hellogaray</title>
+        
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="/assets/css/global.css">
 
-    <!-- Component CSS -->
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/thumbnails.css">
-    <link rel="stylesheet" href="/assets/css/book.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+        <!-- Component CSS -->
+        <link rel="stylesheet" href="/assets/css/header.css">
+        <link rel="stylesheet" href="/assets/css/thumbnails.css">
+        <link rel="stylesheet" href="/assets/css/book.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
 
-</head>
-<body>
-    {% include 'header.njk' %}
+    </head>
+    <body>
+        {% include 'header.njk' %}
 
-    <div class="scroll-blur-overlay"></div>
-    <main>
-        <div id="main-body">
-            {% include 'thumbnails.njk' %}
-        </div>
-    </main>
-</body>
-    {{ content | safe }}
-    {% include 'footer.njk' %}
+        <div class="scroll-blur-overlay"></div>
+        <main>
+            <div id="main-body">
+                {% include 'thumbnails.njk' %}
+            </div>
+        </main>
+
+        {% include 'footer.njk' %}
+    </body>
 </html>
