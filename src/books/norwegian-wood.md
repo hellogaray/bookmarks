@@ -4,10 +4,9 @@ author: Haruki Murakami
 status: Completed
 image: Norwegian Wood.jpg
 date_range: "2025/01/15 - 2025/01/30"
-year: 2025
 rating: 5
 length: 384
-own: Physical
+own: yes
 quotes:
   - text: "What happens when people open their hearts?"
     page: 120

@@ -4,10 +4,9 @@ author: Haruki Murakami
 status: Completed
 image: Kafka on the Shore.jpg
 date_range: "2025/02/10 - 2025/02/25"
-year: 2025
-rating: 5
+rating: 1
 length: 505
-own: E-Book
+own: no
 quotes:
   - text: "Sometimes fate is like a small sandstorm that keeps changing directions."
     page: 27

@@ -18,8 +18,9 @@
 .book__intro {
   font-size: 0.8rem;
   text-align: center;
+  font-weight: 200;
   text-transform: uppercase;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .book__cover {
@@ -77,10 +78,27 @@
   opacity: 0.6;
   transform: translateY(4px);
   transition: all 0.3s ease-in-out;
-  cursor: default;
 }
 
-.book:hover .book__status {
+.book__status_rating {
+  width: 100%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  color: var(--dark-color);
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  opacity: 0.6;
+  transform: translateY(4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.book:hover .book__status, .book__status_rating {
   transform: translateY(0);
   opacity: 0.8;
 }
@@ -93,12 +111,14 @@
 }
 
 /* Tooltip */
-.book__status:hover[data-label]::after {
+.book__status:hover[data-label]::after,
+.book__status_rating:hover[data-label]::after {
   opacity: 1;
   transform: translate(-50%, -0.5rem);
 }
 
-.book__status[data-label]::after {
+.book__status:hover::after,
+.book__status_rating:hover::after {
   content: attr(data-label);
   position: absolute;
   bottom: 100%;

@@ -4,10 +4,9 @@ author: Murasaki Shikibu
 status: Completed
 image: The Tale of Genji.jpg
 date_range: "2025/03/01 - 2025/03/30"
-year: 2025
 rating: 5
 length: 1360
-own: Physical
+own: yes
 quotes:
   - text: "The life of man is like the passing of a dream."
     page: 12

@@ -4,10 +4,9 @@ author: Kazuo Ishiguro
 status: Completed
 image: Never Let Me Go.jpg
 date_range: "2025/08/03 - 2025/08/12"
-year: 2025
-rating: 4
+rating: 2
 length: 288
-own: Physical
+own: yes
 quotes:
   - text: "We all complete. Maybe none of us really understand what we've lived through, or feel we've had enough time."
     page: 263

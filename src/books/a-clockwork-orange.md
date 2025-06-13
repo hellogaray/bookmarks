@@ -4,10 +4,9 @@ author: Anthony Burgess
 status: Completed
 image: A Clockwork Orange.jpeg
 date_range: "2025/09/10 - 2025/09/18"
-year: 2025
-rating: 4
+rating: 1
 length: 192
-own: Physical
+own: yes
 quotes:
   - text: "Is it better for a man to have chosen evil than to have good imposed upon him?"
     page: 98

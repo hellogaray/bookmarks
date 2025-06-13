@@ -4,10 +4,9 @@ author: Ray Bradbury
 status: Completed
 image: Fahrenheit 451.jpg
 date_range: "2025/04/01 - 2025/04/08"
-year: 2025
 rating: 5
 length: 194
-own: Physical
+own: no
 quotes:
   - text: "It was a pleasure to burn."
     page: 1

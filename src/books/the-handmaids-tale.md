@@ -4,10 +4,9 @@ author: Margaret Atwood
 status: Completed
 image: The Handmaid's Tale.webp
 date_range: "2025/01/10 - 2025/01/25"
-year: 2025
 rating: 4
 length: 320
-own: Physical
+own: no
 quotes:
   - text: "Nolite te bastardes carborundorum."
     page: 52
