@@ -1,7 +1,7 @@
 ---
 title: Kafka on the Shore
 author: Haruki Murakami
-status: Completed
+status: no
 image: Kafka on the Shore.jpg
 date_range: "2025/02/10 - 2025/02/25"
 rating: 1

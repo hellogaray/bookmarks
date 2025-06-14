@@ -89,7 +89,6 @@
 
 .thumbnail:hover {
   animation: remove-overflow 2s forwards;
-  transform: scale(1.02);
   opacity: 1;
 }
 

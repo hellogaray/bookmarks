@@ -1,7 +1,7 @@
 ---
 title: The Tale of Genji
 author: Murasaki Shikibu
-status: Completed
+status: yes
 image: The Tale of Genji.jpg
 date_range: "2025/03/01 - 2025/03/30"
 rating: 5

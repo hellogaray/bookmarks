@@ -1,7 +1,7 @@
 ---
 title: Fahrenheit 451
 author: Ray Bradbury
-status: Completed
+status: yes
 image: Fahrenheit 451.jpg
 date_range: "2025/04/01 - 2025/04/08"
 rating: 5

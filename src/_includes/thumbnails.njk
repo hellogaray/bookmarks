@@ -6,7 +6,7 @@
     <span>Book Collection</span>
 </div>
 <ul id="thumbnail-grid">
-    {%- for book in collections.books -%}
+    {% for book in collections.books %}
         <li class="thumbnail">
             <div class="thumbnail__content">
                 <a href="{{  book.url }}">
@@ -41,5 +41,5 @@
                 </div>
             </div>
         </li>
-    {%- endfor -%}
+    {% endfor %}
 </ul>

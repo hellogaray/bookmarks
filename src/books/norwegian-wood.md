@@ -1,7 +1,7 @@
 ---
 title: Norwegian Wood
 author: Haruki Murakami
-status: Completed
+status: yes
 image: Norwegian Wood.jpg
 date_range: "2025/01/15 - 2025/01/30"
 rating: 5

@@ -1,7 +1,7 @@
 ---
 title: The Handmaid's Tale
 author: Margaret Atwood
-status: Completed
+status: yes
 image: The Handmaid's Tale.webp
 date_range: "2025/01/10 - 2025/01/25"
 rating: 4
