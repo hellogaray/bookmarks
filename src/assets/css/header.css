@@ -21,11 +21,11 @@
 }
 
 .scroll-blur-overlay {
-  position: fixed;
+  position: sticky;
   top: 0rem;
   left: 0;
   width: 100%;
-  height: 4rem;
+  height: 2rem;
   pointer-events: none;
   z-index: 999;
   background-color: rgba(250, 250, 250, 0.7);
@@ -115,21 +115,21 @@
 }
 
 .header__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    gap: 1em;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 1em;
 }
 
 /* Header link styles and hover animations */
 .header__link {
-    color: var(--dark-color);
-    font-size: 0.9rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
+  color: var(--dark-color);
+  font-size: 0.9rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
 }

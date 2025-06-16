@@ -4,7 +4,7 @@
 #main-body {
   max-width: 1216px;
   position: static;
-  margin: 6rem auto 4rem auto;
+  margin: 4rem auto 4rem auto;
 }
 
 #thumbnail-grid {
@@ -37,7 +37,6 @@
   border-radius: 8px;
   background-color: transparent;
 }
-
 
 .thumbnail__book_cover {
   display: block;
@@ -77,13 +76,11 @@
   opacity: 0.85;
 }
 
-
 .thumbnail:hover .thumbnail__info {
   animation: show-data 1s forwards;
   opacity: 1;
   transition: opacity .3s;
 }
-
 
 .thumbnail:hover {
   animation: remove-overflow 2s forwards;

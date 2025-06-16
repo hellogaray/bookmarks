@@ -22,12 +22,11 @@
 <body>
     <div class="book-layout">
         <aside class="book__info">
-            <h3 class="book__intro">Insights & Highlights from</h3>
-            <h1 class="book__title">{{ title }}</h1>
-            <div class="book__author">{{ author }}</div>
-            <img class="book__cover" src="{{ '/assets/covers/' | url }}{{ image }}" alt="Book cover of {{ title }}">
-
-            <div class="book__statuses">
+            <h3 class="book__intro" data-animate>Insights & Highlights from</h3>
+            <h1 class="book__title" data-animate>{{ title }}</h1>
+            <div class="book__author" data-animate>{{ author }}</div>
+            <img class="book__cover" data-animate src="{{ '/assets/covers/' | url }}{{ image }}" alt="Book cover of {{ title }}">
+            <div class="book__statuses" data-animate>
                 <span class="book__status_rating" data-label="Rated {{ rating }} out of 5">
                     {%- for i in range(1, rating + 1) %}
                         <svg class="book__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
