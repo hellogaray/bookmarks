@@ -3,25 +3,28 @@
  <header class="header">
     <!-- Name Logo -->
     <section class="header__logo">
-        <div class="logo__letters">
-            <div class="letter first_initial">M</div>
-            <div class="letter char">'</div>
-            <div class="letter char">s</div>
-            <div class="letter char">&nbsp;</div>
-            <div class="letter second_initial">B</div>
-            <div class="letter char">o</div>
-            <div class="letter char">o</div>
-            <div class="letter char">k</div>
-            <div class="letter char">m</div>
-            <div class="letter char">a</div>
-            <div class="letter char">r</div>
-            <div class="letter char">k</div>
-            <div class="letter char">s</div>
-        </div> 
+        <a href="{{ '/' | url }}">
+            <div class="logo__letters">
+                <div class="letter first_initial">M</div>
+                <div class="letter char">'</div>
+                <div class="letter char">s</div>
+                <div class="letter char">&nbsp;</div>
+                <div class="letter second_initial">B</div>
+                <div class="letter char">o</div>
+                <div class="letter char">o</div>
+                <div class="letter char">k</div>
+                <div class="letter char">m</div>
+                <div class="letter char">a</div>
+                <div class="letter char">r</div>
+                <div class="letter char">k</div>
+                <div class="letter char">s</div>
+            </div> 
+        </a>
+
     </section>
     <nav>
         <ul class="header__menu">
-            <li><a class="header__link" href="#books" data-underlink="">Books</a></li>
+            <li><a class="header__link" href="{{ '/' | url }}" data-underlink="">Books</a></li>
             <li><a class="header__link" href="#about-" data-underlink="">About</a></li>
         </ul>
     </nav>

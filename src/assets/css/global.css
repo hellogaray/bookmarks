@@ -49,6 +49,20 @@ p {
   line-height: 30px;
 }
 
+a {
+  color: inherit;        /* Inherit color from parent element */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer;       /* Keep pointer cursor on hover */
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: inherit;        /* No color change on hover/focus/active */
+  text-decoration: none; /* No underline on hover/focus/active */
+}
+
+
 .scroll_message {
   text-align: center;
   text-transform: uppercase;
