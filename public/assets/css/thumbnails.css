@@ -1,14 +1,15 @@
 /* ========================================
    THUMBNAIL SECTION
    ======================================== */
-#main-body {
-  max-width: 1216px;
-  position: static;
-  margin: 2rem auto 2rem auto;
+#thumbnail-section {
+  padding-top: 2em;
+  max-width: 1420px;
+  margin: auto;
 }
-
+  
 /* Search Bar Section */
 #search-bar {
+  margin: 2vw;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -24,8 +25,8 @@
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
   font-size: .8rem;
-  background-color: var(--light-panel, #ffffff);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-lighter);
+  box-shadow: 0 1px 3px var(--color-header-shadow);
   cursor: pointer;
   margin-right: 2.5rem;
 }
@@ -36,10 +37,9 @@
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
   font-size: .8rem;
-  color: var(--text-color, #333);
-  background-color: var(--light-panel);
+  background-color: var(--color-lighter);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px var(--color-header-shadow);
   cursor: pointer;
   user-select: none;
   transition: 
@@ -53,20 +53,20 @@
 
 .filter-by-rating:hover,
 .filter-by-rating:focus {
-  background-color: var(--dark-color);
-  color: #fff;
+  background-color: var(--color-highlight);
+  color: var(--color-font-opposite);
   outline: none;
   transform: translateY(-2px);
 }
 
 .filter-by-rating.active {
-  background-color: var(--dark-color);
-  color: white;
+  background-color: var(--color-highlight);
+  color: var(--color-font-opposite);
   transform: translateY(-3px);
 }
 
 .filter-by-rating:focus-visible {
-  outline: 2px solid var(--dark-color);
+  outline: 2px solid var(--color-highlight);
   outline-offset: 2px;
 }
 
@@ -118,25 +118,24 @@
   left: 50%;
   transform: translateX(-50%) translateY(0.5rem);
   width: 80%;
-  background-color: var(--light-panel, #ffffff);
+  background-color: var(--color-header);
   padding: 8px 12px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid var(--color-base);
   text-align: left;
+  color: var(--color-dark-muted);
   transition: opacity 0.4s ease, transform 0.3s ease, bottom 0.25s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px var(--color-header-shadow);
 }
 
 .thumbnail__book_title {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--dark-color, #222);
   margin: 0;
   margin-bottom: -10px;
 }
 
 .thumbnail__book_author {
   font-size: 0.7rem;
-  color: var(--dark-color-muted, #666);
   margin: 0;
   opacity: 0.85;
 }
@@ -213,8 +212,7 @@
   gap: 0.2rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--dark-color);
-  background-color: #fff;
+  background-color: var(--color-lighter);
   border-radius: 6px;
   opacity: 0.5;
   transform: translateY(4px);
@@ -249,8 +247,8 @@
   bottom: 1.8rem;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(34, 34, 34, 0.95);
-  color: #fff;
+  background: var(--color-highlight);
+  color: var(--color-base);
   padding: 3px 7px;
   font-size: 0.65rem;
   white-space: nowrap;

@@ -1,6 +1,4 @@
- <div class="scroll-blur-overlay"></div>
-
- <header class="header">
+ <header>
     <!-- Name Logo -->
     <section class="header__logo">
         <a href="{{ '/' | url }}">
@@ -21,10 +19,7 @@
             </div> 
         </a>
     </section>
-    <nav>
-        <ul class="header__menu">
-            <li><a class="header__link" href="{{ '/' | url }}" data-underlink="">Books</a></li>
-        </ul>
-        <button id="theme-switch">Theme Switch</button>
-    </nav>
+    <section class="header__menu">
+        <span><a class="header__link" href="{{ '/' | url }}" data-underlink="">About</a></span>
+    </section>
 </header>

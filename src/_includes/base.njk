@@ -1,7 +1,10 @@
 {% include 'layout/head.njk' %}
 <body data-page="home">
+    {% include 'layout/theme-switch.njk' %}
     {% include 'layout/header.njk' %}
+
     <main>
         {{ content | safe }}
     </main>
     {% include 'layout/footer.njk' %}
+

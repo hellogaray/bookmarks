@@ -10,15 +10,79 @@
 
         <!-- Component CSS -->
         <link rel="stylesheet" href="/assets/css/header.css">
+        <link rel="stylesheet" href="/assets/css/theme-switch.css">
         <link rel="stylesheet" href="/assets/css/thumbnails.css">
         <link rel="stylesheet" href="/assets/css/book.css">
         <link rel="stylesheet" href="/assets/css/footer.css">
+
 
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
     </head>
+<body data-page="home">
+    <div id="theme-button">
+    <div id="theme-switch">
+        <svg width="800px" height="800px" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <!-- Sun rays -->
+            <polygon 
+            id="sunRays" 
+            style="fill:#f3a20f;" 
+            stroke="#121212" 
+            stroke-width="5"
+            points="420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211 
+                    256.724,414.779 210,380 163.276,414.779 136.236,363.211 79.055,374.184 77.073,315.986 
+                    20.762,301.144 44.226,247.858 0,210 44.226,172.143 20.762,118.855 77.074,104.014 
+                    79.055,45.816 136.236,56.789 163.276,5.221 210,40 256.723,5.221 283.764,56.789 
+                    340.945,45.816 342.927,104.014 399.238,118.856 375.774,172.142"
+            />
 
+            <!-- Inner sun circles -->
+            <circle cx="210" cy="210" r="170" style="fill:white;" stroke="#121212" stroke-width="5" />
+            <circle cx="210" cy="210" r="150" style="fill:#f3a20f;" stroke="#121212" stroke-width="5"  />
+            
+            <!-- Smiley face -->
+            <!-- Eyes -->
+            <circle cx="180" cy="190" r="8" fill="black" />
+            <circle cx="240" cy="190" r="8" fill="black" />
+
+            <!-- Smile -->
+            <path d="M170,230 Q210,270 250,230" stroke="black" stroke-width="5" fill="transparent" />
+        </g>
+        </svg>
+  </div>
+</div>
+
+
+     <header>
+    <!-- Name Logo -->
+    <section class="header__logo">
+        <a href="/">
+            <div class="logo__letters">
+                <div class="letter first_initial">M</div>
+                <div class="letter char">'</div>
+                <div class="letter char">s</div>
+                <div class="letter char">&nbsp;</div>
+                <div class="letter second_initial">B</div>
+                <div class="letter char">o</div>
+                <div class="letter char">o</div>
+                <div class="letter char">k</div>
+                <div class="letter char">m</div>
+                <div class="letter char">a</div>
+                <div class="letter char">r</div>
+                <div class="letter char">k</div>
+                <div class="letter char">s</div>
+            </div> 
+        </a>
+    </section>
+    <section class="header__menu">
+        <span><a class="header__link" href="/" data-underlink="">About</a></span>
+    </section>
+</header>
+
+    <main>
+        
 <body data-page="book">
     <div class="book-layout">
         <aside class="book__info">
@@ -106,3 +170,16 @@
     </div>
 </body>
 </html>
+
+    </main>
+                <footer>
+                <div id="footer">
+                    <div class="clock">--:--:--</div>
+                    Code by Leo Garay (repository). 
+                    <div class="scroll_message">[Scroll To Explore]</div>
+                </div>
+            </footer> 
+        <script src="/assets/js/loader.js" defer></script>
+    </body>
+</html>
+

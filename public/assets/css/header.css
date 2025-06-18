@@ -2,49 +2,24 @@
 /* ========================================
    HEADER SECTION
    ======================================== */
-.header {
-  position: sticky;
-  z-index: 1000; /* Make sure it's on top of the page content */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 1rem;
-  margin: 0 auto;
-  border-radius: 1.5rem;
-  top: 1rem;
-  background-color: var(--color-header);
-  --shadow-elevation: 0 2px 8px var(--color-header-shadow);
-  box-shadow: var(--shadow-elevation);  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  overflow: hidden;
-}
-
-.scroll-blur-overlay {
-  position: sticky;
-  top: 0rem;
-  left: 0;
+header {
+  position: fixed;
   width: 100%;
-  height: 2rem;
-  pointer-events: none;
-  z-index: 999;
-  background-color: var(--color-header-blur);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  z-index: 999999;
+  top: 2vw;
 }
-
 
 /* ========================================
    HEADER LOGO
    ======================================== */
 .header__logo {
-  padding: 8px 0;
-  display: flex;
-  justify-content: flex-start;
-  font-family: var(--font-inter);
+  position: fixed;
+  left: 2vw;
   color: var(--color-font);
   text-transform: uppercase;
-  font-size: 1.25em;
-  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  z-index: 99999999;
 }
 
 .logo__letters {
@@ -67,7 +42,7 @@
 }
 
 .second_initial {
-  transform: translateX(-25px);
+  transform: translateX(-12px);
 }
 
 /* Hover: fade + slide into place */
@@ -115,21 +90,19 @@
 }
 
 .header__menu {
-  display: flex;
-  align-items: center;
+  position: fixed;
+  right: 2vw;
   list-style: none;
   padding: 0;
-  gap: 1em;
 }
 
 /* Header link styles and hover animations */
 .header__link {
   color: var(--color-font);
-  font-size: 0.9rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   position: relative;
-}
+} 
