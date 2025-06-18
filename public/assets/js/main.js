@@ -1,7 +1,6 @@
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-
 // ---------- Hover Effect on Thumbnails ----------
 const thumbnails = document.querySelectorAll(".thumbnail");
 thumbnails.forEach(el => {
@@ -132,27 +131,7 @@ gsap.utils.toArray(".book__quotes").forEach(book__quotes => {
   });
 });
 
-// ---------- Sliding Animation for Year Sorting ----------
-const filterByRating = document.getElementById('main-body__title');
-
-// Create a timeline paused by default
-const tl = gsap.timeline({ paused: true, reversed: true });
-
-tl.from(".filter-by-rating", {
-  opacity: 0,
-  x: -40,
-  duration: 0.3,
-  ease: "power2.out",
-  stagger: 0.1
-});
-
-filterByRating.addEventListener("click", () => {
-  // Play or reverse depending on current state
-  tl.reversed() ? tl.play() : tl.reverse();
-  filterByRating.classList.toggle("active", !tl.reversed());
-});
-
-
+// ---------- Year Sorting ----------
 const filterButtons = document.querySelectorAll(".filter-by-rating");
 const grid = document.getElementById("thumbnail-grid");
 
@@ -188,4 +167,26 @@ filterButtons.forEach(button => {
       }
     });
   });
+});
+
+// ---------- Sliding Animation for Year Sorting ----------
+const filterByRating = document.getElementById('main-body__title');
+
+// Create a timeline paused by default
+const tl = gsap.timeline({ paused: true, reversed: true });
+
+tl.to(".filter-by-rating", {
+  x: -40,
+  opacity: 1,
+  display: "flex",
+  duration: 0.6,
+  ease: "back.inOut(1.7)",
+  stagger: 0.1,
+
+});
+
+filterByRating.addEventListener("click", () => {
+  // Play or reverse depending on current state
+  tl.reversed() ? tl.play() : tl.reverse();
+  filterByRating.classList.toggle("active", !tl.reversed());
 });
