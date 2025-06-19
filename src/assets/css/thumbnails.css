@@ -1,15 +1,56 @@
 /* ========================================
+   THUMBNAILS GRID
+   ======================================== */
+#thumbnail-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  align-items: flex-start;
+  margin: 2vw;
+}
+
+/* ========================================
+   PAGE INFO SECTION
+   ======================================== */
+
+#page-info {
+  flex: 1 1 25%;
+  top: 2vw;
+  max-width: 30%;
+  padding-right: 1vw;
+  position: sticky;
+  align-self: flex-start;
+}
+
+#page-title {
+  margin: 2vw 2vw 0 2vw;
+  font-family: var(--font-sorts-mill);
+  font-weight: 800;
+  font-weight: 400;
+  font-size: clamp(5.0rem, 6vw, 6vw);
+  line-height: 1;
+}
+
+#page-description {
+  margin: 0 0 0 2vw;  
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+/* ========================================
    THUMBNAIL SECTION
    ======================================== */
 #thumbnail-section {
-  padding-top: 2em;
-  max-width: 1420px;
-  margin: auto;
+  flex: 1 1 75%;
+  max-width: 100%;
+  margin: 0;
+  padding-top: 0;
 }
   
 /* Search Bar Section */
 #search-bar {
-  margin: 2vw;
+  margin: 2vw 2vw 0 2vw;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -264,4 +305,20 @@
   height: 16px;
   fill: currentColor;
   flex-shrink: 0;
+}
+
+
+@media (max-width: 768px) {
+  #main-layout {
+    flex-direction: column;
+  }
+
+  #page-info {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  #thumbnail-section {
+    max-width: 100%;
+  }
 }
