@@ -64,21 +64,18 @@ document.querySelectorAll("a").forEach(link => {
 });
 
 // ---------- Title Entrance Animation on Page Load ----------
-gsap.from("body", {
+gsap.from("main", {
   opacity: 0,
-  y: 20,
+  y: -100,
   duration: 1.8,
-  ease: "power3.out"
+  ease: "power4.out",
 });
 
-gsap.registerPlugin(ScrollTrigger);
-
-// Animate the entire header container
 gsap.from("header", {
   opacity: 0,
-  y: -40,
-  duration: 1,
-  ease: "power3.out"
+  x: -100,
+  duration: 1.8,
+  ease: "bounce",
 });
 
 // Animate each nav link
