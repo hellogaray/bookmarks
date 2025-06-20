@@ -48,7 +48,6 @@
   padding-top: 0;
 }
   
-/* Search Bar Section */
 #search-bar {
   margin: 2vw 2vw 0 2vw;
   position: relative;
@@ -124,11 +123,13 @@
   transform: translateX(4px);
 }
 
-/* Thumbnail Grid Section */
+/* ========================================
+   THUMBNAIL GRID STYLING
+   ======================================== */
 #thumbnail-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   justify-content: center;
@@ -144,6 +145,9 @@
   margin: 2rem;
 }
 
+/* ========================================
+   THUMBNAIL CARD STYLING
+   ======================================== */
 .thumbnail__book_cover {
   display: block;
   width: 100%;
@@ -181,6 +185,9 @@
   opacity: 0.85;
 }
 
+/* ========================================
+   THUMBNAIL HOVER ANIMATIONS
+   ======================================== */
 .thumbnail:hover .thumbnail__info {
   animation: show-data 1s forwards;
   opacity: 1;
@@ -200,6 +207,7 @@
   animation: remove-data 1s forwards;
 }
 
+/* Keyframe Animations */
 @keyframes show-data {
   50% {
     transform: translateX(-50%) translateY(-10rem);
@@ -237,6 +245,9 @@
   }
 }
 
+/* ========================================
+   STATUS TAGS (Length, Date, Rating)
+   ======================================== */
 .thumbnail__statuses {
   display: flex;
   flex-wrap: wrap;
@@ -272,7 +283,7 @@
   opacity: 1;
 }
 
-/* Highlight yellow on hover only if it's a 5-star icon */
+/* Highlight 5-star rating on hover */
 .thumbnail__status--highlight:hover {
   color: #facc15; 
 }
@@ -281,7 +292,9 @@
   opacity: 1;
 }
 
-/* Tooltip style */
+/* ========================================
+   STATUS TOOLTIPS
+   ======================================== */
 .thumbnail__status[data-label]::after {
   content: attr(data-label);
   position: absolute;
@@ -300,6 +313,9 @@
   z-index: 5;
 }
 
+/* ========================================
+   SVG ICONS
+   ======================================== */
 .thumbnail__icon {
   width: 16px;
   height: 16px;
@@ -307,18 +323,30 @@
   flex-shrink: 0;
 }
 
-
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 @media (max-width: 768px) {
-  #main-layout {
+  #thumbnail-layout {
     flex-direction: column;
+
   }
 
   #page-info {
     max-width: 100%;
     padding-right: 0;
+    position: inherit;
+    margin: 10vw 10vw 0 10vw;
+    text-align: center;
   }
 
   #thumbnail-section {
     max-width: 100%;
+    align-self: center;
+  }
+
+  #thumbnail-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0rem;
   }
 }
