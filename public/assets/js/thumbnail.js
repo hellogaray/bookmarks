@@ -1,5 +1,5 @@
 // Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, Flip);
 
 // ---------- Hover Effect on Thumbnails ----------
 const thumbnails = document.querySelectorAll(".thumbnail");
@@ -54,31 +54,31 @@ filterButtons.forEach(button => {
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 
-    // Animate thumbnails visibility based on rating
+    // Capture initial state
+    const state = Flip.getState(thumbnails);
+
+    // Filter thumbnails
     thumbnails.forEach(thumb => {
       const thumbRating = thumb.dataset.rating;
       const shouldShow = selectedRating === "all" || thumbRating === selectedRating;
-
-      if (shouldShow) {
-        gsap.set(thumb, { display: "block" }); 
-        gsap.to(thumb, {
-          autoAlpha: 1,
-          scale: 1,
-          duration: 0.3,
-          ease: "power2.out"
-        });
-      } else {
-        gsap.to(thumb, {
-          autoAlpha: 0,
-          scale: 0.9,
-          duration: 0.3,
-          ease: "power2.in",
-          onComplete: () => gsap.set(thumb, { display: "none" })
-        });
-      }
+      thumb.style.display = shouldShow ? "inline-flex" : "none";
     });
+
+    // Animate to new state
+    Flip.from(state, {
+      duration: 0.5,
+      scale: true,
+      ease: "power1.inOut",
+      stagger: 0.02,
+      absolute: true,
+          onEnter: elements => gsap.fromTo(elements, {opacity: 0, scale: 0}, {opacity: 1, scale: 1, duration: 1}),
+    onLeave: elements => gsap.to(elements, {opacity: 0, scale: 0, duration: 1})
+
+    });
+
   });
 });
+
 
 // ---------- Sliding Animation for Year Sorting ----------
 const filterByRating = document.getElementById('filter-button');
@@ -101,3 +101,25 @@ filterByRating.addEventListener("click", () => {
   tl.reversed() ? tl.play() : tl.reverse();
   filterByRating.classList.toggle("active", !tl.reversed());
 });
+
+// ---------- Sliding Animation for items leaving view from top ----------
+gsap.utils.toArray(thumbnails).forEach((layout) => {
+  gsap.fromTo(
+    layout, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    }, {
+      opacity: 0,
+      y: -60,
+      scale: 0.92,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: layout,
+        start: "top 2rem",    // Start fade when element's top is 2rem from top of viewport
+        end: "top -550px",    // End fade when it's fully out of view
+        scrub: true,
+      },
+    });
+});
+

@@ -33,7 +33,6 @@
 
 #page-description {
   margin: 0 0 0 2vw;  
-  font-size: 0.8rem;
   font-weight: 200;
   text-align: justify;
 }
@@ -60,10 +59,11 @@
 #filter-button {
   display: inline-flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 0.5rem;
   border-radius: 8px;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 0.6rem;
   font-size: .8rem;
   background-color: var(--color-lighter);
   box-shadow: 0 1px 3px var(--color-header-shadow);
