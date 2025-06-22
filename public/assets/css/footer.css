@@ -2,6 +2,7 @@
   FOOTER SECTION
   ======================================== */
 footer {
+  color: var(--color-font);
   position: sticky;
   top: 0;
   width: 100%;

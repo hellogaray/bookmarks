@@ -12,9 +12,8 @@
   margin: 0 auto;
   border-radius: 1.5rem;
   top: 1rem;
-  background-color: white;
-  --shadow-color: rgb(17 94 89 / 0.05);
-  --shadow-elevation: 0 2px 8px var(--shadow-color);
+  background-color: var(--color-header);
+  --shadow-elevation: 0 2px 8px var(--color-header-shadow);
   box-shadow: var(--shadow-elevation);  padding-left: 1.5rem;
   padding-right: 1.5rem;
   overflow: hidden;
@@ -28,7 +27,7 @@
   height: 2rem;
   pointer-events: none;
   z-index: 999;
-  background-color: rgba(250, 250, 250, 0.7);
+  background-color: var(--color-header-blur);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -42,6 +41,7 @@
   display: flex;
   justify-content: flex-start;
   font-family: var(--font-inter);
+  color: var(--color-font);
   text-transform: uppercase;
   font-size: 1.25em;
   font-weight: 900;
@@ -124,7 +124,7 @@
 
 /* Header link styles and hover animations */
 .header__link {
-  color: var(--dark-color);
+  color: var(--color-font);
   font-size: 0.9rem;
   padding-left: 20px;
   padding-right: 20px;

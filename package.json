@@ -1,7 +1,7 @@
 {
   "name": "bookmarks",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "loader.js",
   "scripts": {
     "start": "eleventy --serve",
     "build": "evelenty"

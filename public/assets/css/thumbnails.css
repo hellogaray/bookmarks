@@ -16,12 +16,11 @@
   flex-wrap: wrap;
 }
 
-#main-body__title {
+#filter-button {
   display: inline-flex;
   justify-content: center;
   text-align: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
   border-radius: 8px;
   padding: 0.6rem 1.2rem;
   font-size: .8rem;
@@ -35,7 +34,6 @@
   align-items: center;
   text-align: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
   padding: 0.6rem 1.2rem;
   font-size: .8rem;
   color: var(--text-color, #333);
@@ -72,14 +70,14 @@
   outline-offset: 2px;
 }
 
-#main-body__title::after {
+#filter-button::after {
   content: "";
   opacity: 0;
   transform: translateX(-4px);
   transition: all 0.3s ease;
 }
 
-#main-body__title:hover::after {
+#filter-button:hover::after {
   content: "→";
   opacity: 0.6;
   transform: translateX(4px);
