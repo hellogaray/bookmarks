@@ -1,20 +1,10 @@
 /* ========================================
   FOOTER SECTION
   ======================================== */
-footer {
-  color: var(--color-font);
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Make sure it's on top of the page content */
-  padding-block: 1rem;
-  margin: 0 auto;
-  font-size: 13px;
-}
 
-#footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
+#footer__author {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 9999;
 }

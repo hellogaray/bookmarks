@@ -2,5 +2,6 @@
     "title": "digital garden",
     "description": "A digital garden of sortsr",
     "url": "https://hellogaray.com/garden",
-    "author": "Leo Garay"
+    "author": "Leo Garay",
+    "repository": "https://github.com/hellogaray/bookmarks"
 }
