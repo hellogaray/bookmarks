@@ -2,6 +2,11 @@
   FOOTER SECTION
   ======================================== */
 
+footer {
+  position: fixed;
+  bottom: 1rem;
+}
+
 #footer__author {
   position: fixed;
   bottom: 1rem;
