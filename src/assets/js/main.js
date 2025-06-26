@@ -29,7 +29,7 @@ gsap.from("main", {
 
 
 // Hover scale effect for header links
-document.querySelectorAll(".header__link").forEach(link => {
+document.querySelectorAll("#infoIcon").forEach(link => {
   link.addEventListener("mouseenter", () => {
     gsap.to(link, {
       scale: 1.08,
@@ -45,4 +45,49 @@ document.querySelectorAll(".header__link").forEach(link => {
       ease: "power1.inOut"
     });
   });
+});
+
+// ---------- Overlay Effects ----------
+const infoIcon = document.getElementById('infoIcon');
+const overlay = document.getElementById('overlay');
+const closeBtn = document.getElementById('closeOverlay');
+
+infoIcon.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    gsap.fromTo(overlay, 
+        { opacity: 0 },
+        { opacity: 1, 
+          duration: 0.5, 
+          ease: "power2.out" }
+    );
+});
+
+closeBtn.addEventListener('click', () => {
+  gsap.to(overlay, {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in",
+      onComplete: () => overlay.style.display = 'none'
+  });
+});
+
+gsap.registerPlugin(Flip);
+
+const container1 = document.querySelector(".header__menu "),
+      container2 = document.querySelector(".overlay__content"),
+      box = document.querySelector("#infoIcon");
+
+document.querySelector("#infoIcon").addEventListener("click", () => {
+  const state = Flip.getState(box, {props: "backgroundColor,borderRadius"});
+  
+  box.classList.toggle("active");
+  if (box.parentElement === container1) {
+    container2.appendChild(box);
+  } else {
+    container1.appendChild(box);
+  }
+  
+	Flip.from(state, {
+		duration: 1
+	});
 });
