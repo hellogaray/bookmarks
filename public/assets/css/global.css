@@ -20,6 +20,7 @@ body {
      Color Palette
   ============================== */
   --color-base: #fafafa;
+  --color-base-opposite: #000000;
   --color-overlay-background: rgba(250, 250, 250, 0.85);
   --color-header: #ffffff;
   --color-font: #2e2e2e;
@@ -51,6 +52,7 @@ body {
 
 .darkmode {
   --color-base: #000000;
+  --color-base-opposite: #fafafa;
   --color-overlay-background: rgba(0, 0, 0, 0.85);
   --color-header: #1c1c1c;
   --color-font: #d2d2d2;

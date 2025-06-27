@@ -73,8 +73,8 @@ closeBtn.addEventListener('click', () => {
 
 gsap.registerPlugin(Flip);
 
-const container1 = document.querySelector(".header__menu "),
-      container2 = document.querySelector(".overlay__content"),
+const container1 = document.querySelector(".header__info-container-1"),
+      container2 = document.querySelector(".header__info-container-2"),
       box = document.querySelector("#infoIcon");
 
 document.querySelector("#infoIcon").addEventListener("click", () => {
