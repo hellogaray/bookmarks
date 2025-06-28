@@ -89,12 +89,11 @@ header {
 
 .header__info-container-1 {
   position: fixed;
-  right: 2vw;
+  display: flex;
+  right: 0;
   list-style: none;
   padding: 0;
   z-index: 999999;
-  width: 1.5rem; 
-  height: 1.5rem;
   padding-right: 1rem;
 }
 
@@ -138,3 +137,8 @@ header {
     text-align: center;
 }
 
+
+
+/* ========================================
+   HAMBURGER MENU
+   ======================================== */
