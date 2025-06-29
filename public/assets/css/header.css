@@ -109,7 +109,16 @@ header {
   text-decoration: none;
   display: inline-block;
   position: relative;
+  right: 2vw;
 } 
+
+#infoIcon-close {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: none;
+    position: relative;
+  right: 2vw;
+}
 
 
 /* ========================================
@@ -128,17 +137,27 @@ header {
     z-index: 1000;
     opacity: 0.3;
 }
-
 .overlay__content {
     background: var(--color-base);
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 1000px;
     text-align: center;
+}
+
+.info__title {
+  margin: 2vw 2vw 0 2vw;
+  font-family: var(--font-sorts-mill);
+  font-weight: 800;
+  font-weight: 400;
+  font-size: clamp(4.0rem, 5vw, 5vw);
+  line-height: 1;
 }
 
 
 
 /* ========================================
-   HAMBURGER MENU
+   INFO MENU
    ======================================== */
+
+   

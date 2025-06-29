@@ -50,6 +50,14 @@ body {
   --font-sorts-mill: "Sorts Mill Goudy", serif;
 }
 
+/* 
+Colors
+#f7b648
+#ef9cb4
+#99cb78
+#ef837c
+ */
+
 .darkmode {
   --color-base: #000000;
   --color-base-opposite: #fafafa;

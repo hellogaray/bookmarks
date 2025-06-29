@@ -51,6 +51,7 @@ document.querySelectorAll("#infoIcon").forEach(link => {
 const infoIcon = document.getElementById('infoIcon');
 const overlay = document.getElementById('overlay');
 const closeBtn = document.getElementById('closeOverlay');
+const infoIconClose = document.getElementById('infoIcon-close');
 
 infoIcon.addEventListener('click', () => {
     overlay.style.display = 'flex';
@@ -60,34 +61,68 @@ infoIcon.addEventListener('click', () => {
           duration: 0.5, 
           ease: "power2.out" }
     );
+    gsap.to(infoIcon, {
+      duration: 0.5,
+      ease: "power2.out",
+      opacity: 0,
+      display: "none"
+    });
+    gsap.to(infoIconClose, {
+      delay: 0.5,
+      duration: 0.8,
+      ease: "power2.out",
+      opacity: 1, 
+      display: "inline-block"
+    })
 });
 
-closeBtn.addEventListener('click', () => {
+infoIconClose.addEventListener('click', () => {
   gsap.to(overlay, {
       opacity: 0,
       duration: 0.5,
       ease: "power2.in",
       onComplete: () => overlay.style.display = 'none'
   });
+    gsap.to(infoIconClose, {
+      duration: 0.5,
+      ease: "power2.out",
+      opacity: 0,
+      display: "none"
+    });
+    gsap.to(infoIcon, {
+      delay: 0.5,
+      duration: 0.8,
+      ease: "power2.out",
+      opacity: 1, 
+      display: "inline-block"
+    })
 });
 
-gsap.registerPlugin(Flip);
 
-const container1 = document.querySelector(".header__info-container-1"),
-      container2 = document.querySelector(".header__info-container-2"),
-      box = document.querySelector("#infoIcon");
 
-document.querySelector("#infoIcon").addEventListener("click", () => {
-  const state = Flip.getState(box, {props: "backgroundColor,borderRadius"});
+
+
+
+
+// FLIP ANIMATION
+// gsap.registerPlugin(Flip);
+
+// const container1 = document.querySelector(".header__info-container-1"),
+//       container2 = document.querySelector(".header__info-container-2"),
+//       box = document.querySelector("#infoIcon");
+
+// document.querySelector("#infoIcon").addEventListener("click", () => {
+//   const state = Flip.getState(box, {props: "backgroundColor,borderRadius"});
   
-  box.classList.toggle("active");
-  if (box.parentElement === container1) {
-    container2.appendChild(box);
-  } else {
-    container1.appendChild(box);
-  }
+//   box.classList.toggle("active");
+//   if (box.parentElement === container1) {
+//     container2.appendChild(box);
+//   } else {
+//     container1.appendChild(box);
+//   }
   
-	Flip.from(state, {
-		duration: 1
-	});
-});
+// 	Flip.from(state, {
+// 		duration: 1
+// 	});
+// });
+
