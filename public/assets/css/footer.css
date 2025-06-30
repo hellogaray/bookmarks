@@ -6,9 +6,9 @@ footer {
   bottom: 1rem;
 }
 
-#footer__author {
+.footer__clock {
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
+  right: 2vw;
   z-index: 9999;
 }
