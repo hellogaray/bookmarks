@@ -123,18 +123,6 @@ setInterval(updateClock, 100);
 // Initial call to set the clock immediately
 updateClock();
 
-const menuButton = document.querySelector('.menu_button');
-const menuOverlay = document.querySelector('.menu_overlay');
-const menu = document.querySelector('.menu');
-
-menuButton.addEventListener('click', () => {
-    menu.classList.toggle('menu_open');
-    menuOverlay.classList.toggle('menu_open');
-});
-
-
-
-
 // FLIP ANIMATION
 // gsap.registerPlugin(Flip);
 
