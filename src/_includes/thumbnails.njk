@@ -1,11 +1,9 @@
 <div id="thumbnail-layout">
     <div id="page-info">
-        <div id="page-title">GARDEN</div>
+        <!-- Page Title and Description -->
+        <div id="page-title">{{ site.title }}</div>
         <div id="page-description">
-            A quiet space where the books I've read and the quotes that moved 
-            me take root and grow. This is a living archive — part memory, part reflection — where 
-            ideas are planted, connected, and allowed to evolve over time. Feel free to wander, explore,
-            and revisit.
+            {{  site.description }}
         </div>
     </div>
 
@@ -28,14 +26,15 @@
             <div class="filter-by-rating" data-rating="1">1 Star</div>
         </div>
 
+        <!-- Thumbnail -->
         <ul id="thumbnail-grid" data-page="thumbnails">
-            {% for book in collections.books %}
+            {%- for book in books -%}
                 <li class="thumbnail" data-rating="{{ book.data.rating }}">
                     <div class="thumbnail__content">
 
                         <!-- Book Cover -->
                         <a href="{{ book.url }}">
-                            <img class="thumbnail__book_cover" src="{{ './assets/covers/' | url }}{{ book.data.image }}" alt="Book cover of {{ book.data.title }}">
+                            <img class="thumbnail__book_cover" src="{{ '../assets/covers/' | url }}{{ book.data.image }}" alt="Book cover of {{ book.data.title }}">
                         </a>
 
                         <!-- Book Info Overlay -->
@@ -74,7 +73,29 @@
                         </div>
                     </div>
                 </li>
-            {% endfor %}
+            {%- endfor -%}
         </ul>
+        
+        <!-- Pagination -->
+        <div id="thumbnail__pagination" role="navigation" aria-label="Thumbnail pagination">
+            {% if pagination.href.previous %}
+                <a href="{{pagination.href.previous}}"
+                id="thumbnail__pagination-previous"
+                aria-label="Previous thumbnails"
+                title="Previous thumbnails">
+                    <span aria-hidden="true">&lt;</span>
+                </a>
+            {% endif %}
+            {% if pagination.href.next %}
+                <a href="{{pagination.href.next}}"
+                id="thumbnail__pagination-next"
+                aria-label="Next thumbnails"
+                title="Next thumbnails">
+                    <span aria-hidden="true">&gt;</span>
+                </a>
+            {% endif %}
+        </div>
     </div>
 </div>
+
+

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>『commonplace』  garden</title>
+        
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="/assets/css/global.css">
+
+        <!-- Component CSS -->
+        <link rel="stylesheet" href="/assets/css/header.css">
+        <link rel="stylesheet" href="/assets/css/theme-switch.css">
+        <link rel="stylesheet" href="/assets/css/thumbnails.css">
+        <link rel="stylesheet" href="/assets/css/book.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+      </head>
+    <div id="theme-button">
+    <div id="theme-switch">
+        Lights On
+        <!-- <svg width="800px" height="800px" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <polygon 
+            id="sunRays" 
+            style="fill:#f3a20f;" 
+            stroke="#121212" 
+            stroke-width="5"
+            points="420,210 375.774,247.857 399.238,301.145 342.926,315.986 340.945,374.184 283.764,363.211 
+                    256.724,414.779 210,380 163.276,414.779 136.236,363.211 79.055,374.184 77.073,315.986 
+                    20.762,301.144 44.226,247.858 0,210 44.226,172.143 20.762,118.855 77.074,104.014 
+                    79.055,45.816 136.236,56.789 163.276,5.221 210,40 256.723,5.221 283.764,56.789 
+                    340.945,45.816 342.927,104.014 399.238,118.856 375.774,172.142"
+            />
+            <circle cx="210" cy="210" r="170" style="fill:white;" stroke="#121212" stroke-width="5" />
+            <circle cx="210" cy="210" r="150" style="fill:#f3a20f;" stroke="#121212" stroke-width="5"  />
+            <circle cx="180" cy="190" r="8" fill="black" />
+            <circle cx="240" cy="190" r="8" fill="black" />
+            <path d="M170,230 Q210,270 250,230" stroke="black" stroke-width="5" fill="transparent" />
+        </g>
+        </svg> -->
+  </div>
+</div>
+
+
+     <header>
+    <!-- Name Logo -->
+    <section class="header__logo">
+        <a href="/">
+            <div class="logo__letters">
+                <div class="letter first_initial">M</div>
+                <div class="letter char">'</div>
+                <div class="letter char">s</div>
+                <div class="letter char">&nbsp;</div>
+                <div class="letter second_initial">B</div>
+                <div class="letter char">o</div>
+                <div class="letter char">o</div>
+                <div class="letter char">k</div>
+                <div class="letter char">m</div>
+                <div class="letter char">a</div>
+                <div class="letter char">r</div>
+                <div class="letter char">k</div>
+                <div class="letter char">s</div>
+            </div> 
+        </a>
+    </section>
+    <section class="header__info-container-1">
+        <div id="infoIcon"> info </div>
+        <div id="infoIcon-close"> close </div>
+    </section>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+        <div class="overlay__content">
+            <div class="header__info-container-2"></div>
+            <span class="info__title">INFORMATION</span>
+            <div class="info__stack">
+                <p class="overlay__title">
+                    Stack
+                </p>
+                <p class="overlay__info">
+                    This site was made using <a href="https://www.11ty.dev">11ty</a> 
+                    and <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content">HTML</a>. 
+                    Animations are a combination of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction">JavaScript</a>, 
+                    <a href="">CSS</a>, and <a href="https://gsap.com/">GSAP</a>
+                </p>
+            </div>
+            <div class="info__about">
+                <p class="overlay__title">
+                    Author
+                </p>
+                <p class="overlay__info">
+                    Made by <a href="https://github.com/hellogaray">hellogaray</a>, you can take a look at the code <a href="https://github.com/hellogaray/bookmarks">here</a>.
+                </p> 
+            </div>
+            <div class="info__copyrights">
+                <p class="overlay__title">
+                    Copyright
+                </p>
+                <p class="overlay__info">
+                    
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <body data-page="home">
+    <div id="thumbnail-layout">
+    <div id="page-info">
+        <!-- Page Title and Description -->
+        <div id="page-title">garden</div>
+        <div id="page-description">
+            A quiet space where the books I&#39;ve read and the quotes that moved me take root and grow. This is a living archive — part memory, part reflection — where ideas are planted, connected, and allowed to evolve over time. Feel free to wander, explore, and revisit.
+        </div>
+    </div>
+
+    <div id="thumbnail-section">
+        <div id="search-bar"> 
+            <!-- Filter Button Trigger -->
+            <div id="filter-button">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7.833 2c-.507 0-.98.216-1.318.576A1.92 1.92 0 0 0 6 3.89V21a1 1 0 0 0 1.625.78L12 18.28l4.375 3.5A1 1 0 0 0 18 21V3.889c0-.481-.178-.954-.515-1.313A1.808 1.808 0 0 0 16.167 2H7.833Z"/>
+                </svg>
+                <span>Filter by Rating</span>
+            </div>
+
+            <!-- Rating Filters (initially hidden) -->
+            <div class="filter-by-rating" data-rating="all">Show All</div>
+            <div class="filter-by-rating" data-rating="5">5 Stars</div>
+            <div class="filter-by-rating" data-rating="4">4 Stars</div>
+            <div class="filter-by-rating" data-rating="3">3 Stars</div>
+            <div class="filter-by-rating" data-rating="2">2 Stars</div>
+            <div class="filter-by-rating" data-rating="1">1 Star</div>
+        </div>
+
+        <!-- Thumbnail -->
+        <ul id="thumbnail-grid" data-page="thumbnails"><li class="thumbnail" data-rating="1">
+                    <div class="thumbnail__content">
+
+                        <!-- Book Cover -->
+                        <a href="/books/kafka-on-the-shore/">
+                            <img class="thumbnail__book_cover" src="../assets/covers/Kafka on the Shore.jpg" alt="Book cover of Kafka on the Shore">
+                        </a>
+
+                        <!-- Book Info Overlay -->
+                        <div class="thumbnail__info">
+                            <h3 class="thumbnail__book_title">Kafka on the Shore</h3>
+                            <span class="thumbnail__book_author">by Haruki Murakami</span>
+
+                            <!-- Book Status Tags -->
+                            <div class="thumbnail__statuses">
+
+                                <!-- Length -->
+                                <span class="thumbnail__status" data-label="Length">
+                                    <svg class="thumbnail__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                                    </svg>
+                                    505
+                                </span>
+
+                                <!-- Date Read -->
+                                <span class="thumbnail__status" data-label="Date Read">
+                                    <svg class="thumbnail__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/>
+                                    </svg>
+                                    2025
+                                </span>
+
+                                <!-- Rating -->
+                                <span class="thumbnail__status " data-label="Rating">
+                                    <svg class="thumbnail__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                                    </svg>
+                                    1
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li><li class="thumbnail" data-rating="2">
+                    <div class="thumbnail__content">
+
+                        <!-- Book Cover -->
+                        <a href="/books/never-let-me-go/">
+                            <img class="thumbnail__book_cover" src="../assets/covers/Never Let Me Go.jpg" alt="Book cover of Never Let Me Go">
+                        </a>
+
+                        <!-- Book Info Overlay -->
+                        <div class="thumbnail__info">
+                            <h3 class="thumbnail__book_title">Never Let Me Go</h3>
+                            <span class="thumbnail__book_author">by Kazuo Ishiguro</span>
+
+                            <!-- Book Status Tags -->
+                            <div class="thumbnail__statuses">
+
+                                <!-- Length -->
+                                <span class="thumbnail__status" data-label="Length">
+                                    <svg class="thumbnail__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"/>
+                                    </svg>
+                                    288
+                                </span>
+
+                                <!-- Date Read -->
+                                <span class="thumbnail__status" data-label="Date Read">
+                                    <svg class="thumbnail__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/>
+                                    </svg>
+                                    2025
+                                </span>
+
+                                <!-- Rating -->
+                                <span class="thumbnail__status " data-label="Rating">
+                                    <svg class="thumbnail__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/>
+                                    </svg>
+                                    2
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li></ul>
+        
+        <!-- Pagination -->
+        <div id="thumbnail__pagination" role="navigation" aria-label="Thumbnail pagination">
+            
+                <a href="/1/"
+                id="thumbnail__pagination-previous"
+                aria-label="Previous thumbnails"
+                title="Previous thumbnails">
+                    <span aria-hidden="true">&lt;</span>
+                </a>
+            
+            
+                <a href="/3/"
+                id="thumbnail__pagination-next"
+                aria-label="Next thumbnails"
+                title="Next thumbnails">
+                    <span aria-hidden="true">&gt;</span>
+                </a>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    </main>
+                <footer>
+                <div class="footer__clock">--:--:--</div>
+            </footer> 
+        <script src="/assets/js/loader.js" defer></script>
+    </body>
+</html>
+

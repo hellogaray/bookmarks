@@ -122,4 +122,3 @@ gsap.utils.toArray(thumbnails).forEach((layout) => {
       },
     });
 });
-

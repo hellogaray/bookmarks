@@ -29,6 +29,7 @@
   font-weight: 400;
   font-size: clamp(5.0rem, 6vw, 6vw);
   line-height: 1;
+  text-transform: uppercase;
 }
 
 #page-description {
@@ -245,6 +246,39 @@
 }
 
 /* ========================================
+   PAGINATION
+   ======================================== */
+/* #thumbnail__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+
+} */
+
+#thumbnail__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+#thumbnail__pagination a {
+    text-decoration: none;
+    font-size: 3rem;
+    color: var(--color-dark-muted);
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+#thumbnail__pagination a:hover {
+    background-color: var(--color-base-opposite);
+    color: var(--color-base);
+}
+
+
+/* ========================================
    STATUS TAGS (Length, Date, Rating)
    ======================================== */
 .thumbnail__statuses {
@@ -349,3 +383,4 @@
   gap: 0rem;
   }
 }
+
