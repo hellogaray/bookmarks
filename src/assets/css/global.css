@@ -297,8 +297,6 @@ blockquote::after {
   transition: opacity 0.3s ease-in-out;
 }
 
-
-
 /* Optional fade-in animation */
 @keyframes fadeInQuote {
   0% {

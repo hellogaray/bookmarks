@@ -367,20 +367,45 @@
 
   #page-info {
     max-width: 100%;
-    padding-right: 0;
+    padding: 2rem 1rem 1rem 2rem;
     position: inherit;
-    margin: 10vw 10vw 0 10vw;
+    margin: 10vw auto 0 auto;
     text-align: center;
   }
 
+  #filter-button {
+    display: none;
+    padding: 0;
+  }
+
+  .filter-by-rating {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));    
+    opacity: 1;
+    margin: 0 auto;
+    gap: 0;
+  }
+
   #thumbnail-section {
-    max-width: 100%;
+
+    max-width: 350px;
     align-self: center;
   }
 
   #thumbnail-grid {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  list-style: none;
+  padding: 0;
+
   }
+
+  .thumbnail__book_cover {
+  display: block;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 8px;
+  margin: 0 auto;
+}
 }
 
