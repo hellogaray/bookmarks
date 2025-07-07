@@ -219,3 +219,39 @@ blockquote {
   animation: fadeInQuote 0.6s ease-in-out both;
 }
 
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .book-layout {
+    padding: 3rem;
+    max-width: 1420px;
+    margin: auto;  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book__info {
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    border-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .book__statuses {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .book__quotes {
+    padding: 0;
+    margin: 0;
+  }
+}

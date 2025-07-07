@@ -1,6 +1,9 @@
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger, Flip);
 
+
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
 // ---------- Hover Effect on Thumbnails ----------
 const thumbnails = document.querySelectorAll(".thumbnail");
 thumbnails.forEach(el => {
@@ -21,6 +24,45 @@ thumbnails.forEach(el => {
       ease: "power2.inOut"
     });
   });
+});
+
+gsap.utils.toArray(".thumbnail").forEach(thumbnail => {
+  // Scroll-in animation (triggered when element enters viewport)
+  gsap.from(thumbnail, {
+    opacity: 0,
+    y: 60,
+    scale: 0.92,
+    rotationX: 6,
+    transformOrigin: "top center",
+    duration: 0.7,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: thumbnail,
+      start: "top 90%",
+      toggleActions: "play none none none" // play on enter only
+    }
+  });
+
+  // Scroll-out (scrubbed) animation when element scrolls out of view toward top
+  gsap.fromTo(thumbnail,
+    {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    },
+    {
+      opacity: 0,
+      y: -60,
+      scale: 0.92,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: thumbnail,
+        start: "top 2rem",   // When top is near top of viewport
+        end: "top -550px",   // Fully scrolled out
+        scrub: true,
+      },
+    }
+  );
 });
 
 
@@ -61,42 +103,26 @@ filterButtons.forEach(button => {
   });
 });
 
-// ---------- Sliding Animations  ----------
-gsap.utils.toArray(".thumbnail").forEach(thumbnail => {
-  // Scroll-in animation (triggered when element enters viewport)
-  gsap.from(thumbnail, {
-    opacity: 0,
-    y: 60,
-    scale: 0.92,
-    rotationX: 6,
-    transformOrigin: "top center",
-    duration: 0.7,
-    ease: "power4.out",
-    scrollTrigger: {
-      trigger: thumbnail,
-      start: "top 90%",
-      toggleActions: "play none none none" // play on enter only
-    }
+
+// ---------- Animation for Year Sorting ----------
+const filterByRating = document.getElementById('filter-button');
+
+if (!isMobile) {
+  // Create a timeline paused by default
+  const tl = gsap.timeline({ paused: true, reversed: true });
+  tl.to(".filter-by-rating", {
+    x: -40,
+    opacity: 1,
+    display: "inline-block",
+    duration: 0.6,
+    ease: "back.inOut(1.7)",
+    stagger: 0.1,
+
   });
 
-  // Scroll-out (scrubbed) animation when element scrolls out of view toward top
-  gsap.fromTo(thumbnail,
-    {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-    },
-    {
-      opacity: 0,
-      y: -60,
-      scale: 0.92,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: thumbnail,
-        start: "top 2rem",   // When top is near top of viewport
-        end: "top -550px",   // Fully scrolled out
-        scrub: true,
-      },
-    }
-  );
-});
+  filterByRating.addEventListener("click", () => {
+    // Play or reverse depending on current state
+    tl.reversed() ? tl.play() : tl.reverse();
+    filterByRating.classList.toggle("active", !tl.reversed());
+  });
+};
