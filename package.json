@@ -4,7 +4,7 @@
   "main": "loader.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "evelenty"
+    "build": "eleventy"
   },
   "keywords": [],
   "author": "",
