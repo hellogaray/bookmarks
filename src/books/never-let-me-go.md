@@ -3,8 +3,8 @@ title: Never Let Me Go
 author: Kazuo Ishiguro
 status: false
 image: Never Let Me Go.jpg
-date_started: "2025/02/01" 
-date_ended: "2025/02/12"
+start_date: "2025/02/01" 
+end_date: "2025/02/12"
 rating: 2
 length: 288
 own: yes

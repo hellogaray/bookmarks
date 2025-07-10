@@ -3,8 +3,8 @@ title: Kafka on the Shore
 author: Haruki Murakami
 status: true
 image: Kafka on the Shore.jpg
-date_started: "2025/02/01" 
-date_ended: "2025/02/12"
+start_date: "2025/02/01" 
+end_date: "2025/02/12"
 rating: 1
 length: 505
 own: no
