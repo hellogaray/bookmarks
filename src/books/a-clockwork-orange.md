@@ -1,9 +1,10 @@
 ---
 title: A Clockwork Orange
 author: Anthony Burgess
-status: no
+status: false
 image: A Clockwork Orange.jpeg
-date_range: "2025/09/10 - 2025/09/18"
+date_started: "2025/02/01" 
+date_ended: "2025/02/12"
 rating: 1
 length: 192
 own: yes
