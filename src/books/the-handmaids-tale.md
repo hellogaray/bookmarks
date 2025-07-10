@@ -1,7 +1,7 @@
 ---
 title: The Handmaid's Tale
 author: Margaret Atwood
-status: true
+status: Read
 image: The Handmaid's Tale.webp
 start_date: "2025/02/01" 
 end_date: "2025/02/12"

@@ -1,7 +1,7 @@
 ---
 title: Never Let Me Go
 author: Kazuo Ishiguro
-status: false
+status: Read
 image: Never Let Me Go.jpg
 start_date: "2025/02/01" 
 end_date: "2025/02/12"

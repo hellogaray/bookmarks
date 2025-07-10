@@ -1,7 +1,7 @@
 ---
 title: A Clockwork Orange
 author: Anthony Burgess
-status: false
+status: Read
 image: A Clockwork Orange.jpeg
 start_date: "2025/02/01" 
 end_date: "2025/02/12"

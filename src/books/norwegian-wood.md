@@ -1,7 +1,7 @@
 ---
 title: Norwegian Wood
 author: Haruki Murakami
-status: true
+status: Read
 image: Norwegian Wood.jpg
 start_date: "2025/02/01" 
 end_date: "2025/02/12"

@@ -1,7 +1,7 @@
 ---
 title: Kafka on the Shore
 author: Haruki Murakami
-status: true
+status: Read
 image: Kafka on the Shore.jpg
 start_date: "2025/02/01" 
 end_date: "2025/02/12"

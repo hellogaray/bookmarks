@@ -1,7 +1,7 @@
 ---
 title: Fahrenheit 451
 author: Ray Bradbury
-status: false
+status: Read
 image: Fahrenheit 451.jpg
 start_date: "2025/02/01" 
 end_date: "2025/02/12"
