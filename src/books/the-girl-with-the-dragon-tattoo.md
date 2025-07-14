@@ -1,6 +1,6 @@
 ---
 title: The Girl With the Dragon Tattoo
-author: Stieg Larsson
+author: "Stieg Larsson "
 status: Read
 image: the-girl-with-the-dragon-tattoo.jpg
 start_date: 2024/12/15
