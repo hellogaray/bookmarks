@@ -2,7 +2,7 @@
 title: The Girl With the Dragon Tattoo
 author: Stieg Larsson
 status: Read
-image: /assets/covers/the-girl-with-the-dragon-tattoo.jpg
+image: the-girl-with-the-dragon-tattoo.jpg
 start_date: 2024/12/15
 end_date: 2024/12/31
 rating: 5
