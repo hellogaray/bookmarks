@@ -12,7 +12,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string", pattern: ['.{1,}', "Must have at least 1 characters"]} 
       - { label: "Author", name: "author", widget: "string", pattern: ['.{1,}', "Must have at least 1 characters"]}
-      - { label: "Status", name: "status", widget: "select", options: ["Read", "Want To Read"]} 
+      - { label: "Status", name: "status", widget: "select", options: ["Read", "Want To Read"], default: ["Read"]} 
       - { label: "Image", name: "image", widget: "image"}
       - { label: "Start Date", name: "start_date", widget: "datetime", date_format: "YYYY/MM/DD"}
       - { label: "End Date", name: "end_date", widget: "datetime", date_format: "YYYY/MM/DD"}
